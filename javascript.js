@@ -9,19 +9,15 @@ console.log("I am from " + l);
 
 //Task 2
 
-let a=prompt("What is your name");
-console.log(a);
+  var name = prompt("Enter your name:");
 
-alert("Welcome for our site");
+  alert("Welcome " + name + "!");
 
-let l1=confirm("Do you want to learn Javascript");
+  var c = confirm("Do you want to learn JavaScript?");
 
-if (l1) {
-    alert("Great Choice!");
-} else {
-    alert("No Problem!");
-}
-
+  c
+    ? alert("Great Choice!") 
+    : alert("No Problem!");
 
 //Task 3
 
@@ -69,7 +65,7 @@ console.log("Course Name:", student.course);
 
 //Task 7
 
-let product = {
+var product = {
     name: "Laptop",
     price: 45000,
     category: "Electronics",
