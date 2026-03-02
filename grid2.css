@@ -1,0 +1,32 @@
+body {
+  margin: 0;
+  background-color:black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 200px 200px 200px 200px;
+  grid-template-rows: 200px 200px 200px;
+  gap: 10px;
+  grid-template-areas: 
+  "fruit1 fruit2 fruit3 fruit3"
+  "fruit4 fruit4 fruit3 fruit3"
+  "fruit5 fruit5 fruit6 fruit6";
+}
+.fruit1{ grid-area: fruit1;}
+.fruit2{grid-area: fruit2;}
+.fruit3{grid-area: fruit3;}
+.fruit4{grid-area:fruit4;}
+.fruit5{grid-area: fruit5;}
+.fruit6{grid-area: fruit6;}
+
+.grid img{
+
+    height: 100%;
+    width: 100%;
+   
+}

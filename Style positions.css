@@ -1,0 +1,51 @@
+*{
+    margin: 0;
+    padding: 0px;
+    margin-bottom: 10px;
+}
+.greybox{
+    background-color: grey;
+    height: 800px;
+    width: 250px;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    font-size: large;
+    font-style: times new roman;
+    color: white;
+    padding: 20px;
+  
+    
+}
+.content{
+    margin-left: 280px;
+   
+}
+
+.header{
+    background-color:antiquewhite;
+    background-size: cover;
+    margin-left: 280px;
+    padding: 20px;
+    
+    
+}
+.images{
+    display: flex;
+    flex-wrap: wrap;  
+    gap: 100px;
+}
+
+.menu-image{ 
+    width: 200px;
+    height: 200px;
+    margin-right: 50px;
+    object-fit: cover;
+}
+   
+
+
+
+   
+  

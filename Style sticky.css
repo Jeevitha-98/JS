@@ -1,0 +1,36 @@
+
+
+.header{
+    position: sticky;
+    top: 0;
+    background-color: antiquewhite;
+    background-size: cover;
+   margin-top: 0px;
+    padding: 10px;
+    text-align: center;
+    z-index: 1000;
+    width: 1500px;
+
+}
+.menu{
+    position: sticky;
+    width:1500px;
+    height: 50px;
+   
+    top: 100px;
+    z-index: 1000;
+    background-color:yellowgreen;
+    background-size: cover;
+   margin-top: 0px;
+    padding: 10px;
+    text-align: center;
+    justify-content: center;
+      display: flex;  
+      gap: 150px;
+
+}
+.content{
+    padding-top: 10px;
+}
+
+

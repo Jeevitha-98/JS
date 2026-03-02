@@ -1,0 +1,39 @@
+body {
+  margin: 0;
+  background-color: #2e2f55;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-size: large;
+  font-weight: bold;
+  color: white;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 200px 200px 200px 200px;
+  grid-template-rows: 150px 150px 150px;
+  gap: 10px;
+  grid-template-areas: 
+  "box1 box2 box2 box3"
+  "box1 box4 box5 box6"
+  "box1 box7 box8 box6";
+}
+
+.box1 { background: #6dbc4a; 
+    grid-area: box1; }
+.box2 { background: #6dbc4a; 
+    grid-area: box2; }
+.box3 { background: #ef2f2f; 
+    grid-area: box3; }
+.box4 { background: #f5a623; 
+    grid-area: box4; }
+.box5 { background: #ef2f2f; 
+    grid-area: box5; }
+.box6 { background: #6dbc4a; 
+    grid-area: box6; }
+.box7 { background: #ef2f2f; 
+    grid-area: box7; }
+.box8 { background: #f5a623; 
+    grid-area: box8; }

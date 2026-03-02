@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Details</title>
+</head>
+<body>
+    <h1>Application Form</h1>
+    <hr>
+    <h2>Personal Information</h2>
+    <form action="/submit" method="post"
+    <label for="Full Name"><b>Name</b>:</label>
+    <input type="text" name="name" required><br><br>
+    <label for="Email"><b>Email</b>:</label>
+    <input type="email" name="email" required><br><br>
+    <label for="Phone Number"><b>Phone Number</b>:</label>
+    <input type="tel" name="phone" required><br><br>
+    <label for="Date of Birth"><b>Date of Birth</b>:</label>
+    <input type="date" name="dob" required><br><br>
+    <label for="Gender"><b>Gender</b>:</label>
+    <input type="radio" name="gender" value="male" required> Male
+    <input type="radio" name="gender" value="female" required> Female<br><br>
+    <textarea name="address" rows="4" cols="50" placeholder="Enter your address here..." required></textarea><br>
+    <hr>
+    <form action="/submit" method="post">
+    <h2>Job Preferences</h2>
+    <label for="Position"><b>Position</b>:</label>
+    <select name="position" required>
+        <option value="">Select Position</option>
+        <option value="developer">Developer</option>
+        <option value="designer">Designer</option>
+        <option value="manager">Manager</option>
+    </select><br><br>
+    <label for="Skills"><b>Technical Skills</b>:</label>
+    <input type="checkbox" name="skills" value="html"> HTML
+    <input type="checkbox" name="skills" value="css"> CSS
+    <input type="checkbox" name="skills" value="javascript"> JavaScript
+    <input type="checkbox" name="skills" value="python"> Python
+    <input type="checkbox" name=""skills" value="java"> Java<br><br>
+    <label for="Experience"><b>Years of Experience</b>:</label>
+    <input type="number" name="experience" min="0" max="50" required><br><br>
+    <label for="Current Company"><b>Current Company Name</b>:</label>
+    <input type="text" name="company" required><br><br>
+    <label for="Expected Salary"><b>Expected Salary</b>:</label>
+    <input type="number" name="salary" min="0" required><br><br>
+    <label for="Notice Period"><b>Notice Period (in days)</b>:</label>
+    <input type="number" name="notice_period" min="0" required><br><br>
+    <label for="Available Start Date"><b>Available Start Date</b>:</label>
+    <input type="date" name="start_date" required><br><br>
+    <label for="Resume"><b>Upload Resume</b>:</label>
+    <input type="file" name="resume" accept=".pdf,.doc,.docx" required><br><br>
+    <hr>
+    <h2>Account Details</h2>
+    <label for="Username"><b>Username</b>:</label>
+    <input type="text" name="username" placeholder="Enter your username" required><br><br>
+    <label for="Password"><b>Password</b>:</label>
+    <input type="password" name="password" placeholder="Enter your password" required><br><br>
+    <label for="Confirm Password"><b>Confirm Password</b>:</label>
+    <input type="password" name="confirm_password" placeholder="Confirm your password" required><br><br>
+    <label for="Security Question"><b>Security Question</b>:</label>
+    <input type="text" name="security_question" placeholder="What is your favorite color?" required><br><br>
+    <label for="Security Answer"><b>Security Answer</b>:</label>
+    <input type="text" name="security_answer" placeholder="Enter your answer" required><br><br>
+    <hr>
+    <h2>Emergency Contact</h2>
+    <label for="Emergency Contact Name"><b>Emergency Contact Name</b>:</label>
+    <input type="text" name="emergency_name" required><br><br>
+    <label for="Emergency Contact Phone"><b>Emergency Contact Phone</b>:</label>
+    <input type="tel" name="emergency_phone" required><br><br>
+    <hr
+    <label for="declaration section"><b>Declaration</b>:</label><br>
+    <input type="checkbox" name="declaration" value="agree" required> I hereby declare that the information provided is true and accurate to the best of my knowledge.<br><br>
+    <input type="submit" value="Submit Application">
+    <input type="reset" value="Reset Form">
+    </form>
+    
+</body>
+</html>

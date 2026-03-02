@@ -1,0 +1,27 @@
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  background: #222;
+}
+
+.ball {
+  width: 60px;
+  height: 60px;
+  background: blue;
+  border-radius: 50%;
+  animation: bounce 1s infinite alternate ease-in-out;
+}
+
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0); 
+  }
+
+  100% {
+    transform: translateY(-400px); 
+  }
+}

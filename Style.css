@@ -1,0 +1,89 @@
+
+.box{
+    background-color: white;
+    width: 350px;
+    height: 300px;
+    border: 100px solid whitesmoke;
+    padding: 30px;
+    margin: 30px;
+    text-align: center;
+    --c: whitesmoke;
+  --r: 60px; /* control the inner radius */
+  --b: 130px;   /* control the border thickness*/
+   border: 80px solid transparent;
+  border-image: 
+    radial-gradient(
+          #0000 calc(51% - var(--b)),
+       var(--c) calc(52% - var(--b))
+     ) 39.9%/var(--r);
+       
+        
+}
+
+button {
+    background-color: rgb(81, 108, 246);
+    color: white;
+    border: none;
+    padding: 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    margin-top: 20px;
+    cursor: pointer;
+    width: 300px;
+    height: 50px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    border-radius: 15px;
+        font-color: white;
+}
+
+h1{
+    font-size: 40px;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: black;
+    font-weight: bold;
+     margin-top: 10px;
+    margin-bottom: 3px; /* Space under H1 */
+}
+h2{
+    font-size: 20px;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: grey;
+        margin-top: 0px; /* Space above H2 */
+        margin-bottom: 10px; /* Space under H2 */
+}
+
+p{
+    font-size: 20px;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: black;
+    margin-top: 30px;
+    margin-bottom: 40px; /* Space under H2 */
+      
+
+}
+.profile-pic-wrapper {
+  width: 160px;       /* Set the size of the circle container */
+  height: 20px;
+  border-radius: 50%; /* Creates the circular shape of the container */
+  overflow: hidden;   /* Hides any part of the image outside the circle */
+  /* Optional: Add a border for visual appeal */
+  border: 3px solid #ccc;
+  text-align: center;
+ margin: 0 auto; 
+}
+
+.profile-pic-img {
+  width: 50px;        /* Ensures the image fills the container width */
+  height: 50px;       /* Ensures the image fills the container height */
+  object-fit: cover;  /* Scales and crops the image nicely to fit the circle */
+  text-align: center;
+}
+
+  
+  
