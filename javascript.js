@@ -9,15 +9,17 @@ console.log("I am from " + l);
 
 //Task 2
 
-  var name = prompt("Enter your name:");
+ var n3 = prompt("Enter your name:");
 
-  alert("Welcome " + name + "!");
+alert("Welcome " + n3 + "!");
 
-  var c = confirm("Do you want to learn JavaScript?");
+var c = confirm("Do you want to learn JavaScript?");
 
-  c
-    ? alert("Great Choice!") 
-    : alert("No Problem!");
+if (c) {
+    alert("Great Choice!");
+} else {
+    alert("No Problem!");
+}
 
 //Task 3
 
