@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+//================================
+// 1. Employee Salary Analysis System
+//================================
+
+let employees = [
+ {name:"Ravi", salary:25000},
+ {name:"Meena", salary:60000},
+ {name:"Arun", salary:45000},
+ {name:"Priya", salary:80000},
+ {name:"John", salary:30000}
+]
+
+let newfilter=employees.filter((c,i,t)=>{
+    return c.salary>40000
+})
+console.log(newfilter);
+
+let newfind=employees.find((c,i,t)=>{
+    return c.salary>40000
+})
+console.log(newfind);
+
+let overallsalary = employees.reduce((acc, c, i, t) => {
+    return acc + c.salary;
+}, 0);
+
+console.log(overallsalary);
+
+let newfilter1=employees.filter((c,i,t)=>{
+    return c.salary<20000
+})
+console.log(newfilter1);
+
+let newfilter2=employees.filter((c,i,t)=>{
+    return c.salary>20000
+})
+console.log(newfilter2);
+
+//==============================
+// E-commerce Product Search
+//=============================
+
+let products = ["laptop","mobile","tablet","smartwatch","mobile"]
+
+let includesval=products.includes("tablet");
+console.log(includesval);
+
+let fromindexval = products.indexOf("mobile");
+console.log(fromindexval);
+
+let lastindexval = products.lastIndexOf("mobile");
+console.log(lastindexval);
+
+let includesval1 = products.includes("laptop");
+console.log(includesval1);
+
+//=============================
+//3️⃣ Website Username Formatter
+//=============================
+
+let username = "  naveenkumar  "
+
+console.log(username.trim());
+console.log(username.toUpperCase());
+console.log(username.toLowerCase());
+console.log(username.slice(2,8));
+
+//===========================
+//4️⃣ Game Platform Data Processing
+//===========================
+
+let games = ["cricket","football","hockey","tennis"]
+
+games.forEach((c,i,t)=>{
+    console.log(c);
+})
+
+let Games = ["cricket","football","hockey","tennis"];
+
+let newArray = games.map(game => "Game : " + game);
+
+console.log(newArray);
+
+//=========================
+//5️⃣ Student Marks Analyzer
+//=========================
+
+let marks = [45,90,23,67,88,12]
+
+let asc = marks.sort((a,b) => a - b);
+console.log(asc);
+
+let desc = marks.sort((a,b) => b - a);
+console.log(desc);
+
+let reverseMarks = marks.reverse();
+console.log(reverseMarks);
+
+//=================================
+//6️⃣ Salary Report Generator
+//=================================
+
+let salaries = [10000,20000,30000,40000]
+
+let totalSalary = salaries.reduce((acc, curr) => acc + curr, 0);
+let averageSalary = totalSalary / salaries.length;
+console.log(totalSalary);
+console.log(averageSalary);
+
+//===============================
+//7️⃣ URL Processor
+//===============================
+
+let url = "www-stackly-com"
+let result = url.split("-");
+console.log(result);
+
+//===============================
+//8️⃣ Job Role Modifier
+//===============================
+
+let role = "python developer"
+
+console.log(role.replace("python","javascript"));
+console.log(role.startsWith("python"));
+console.log(role.endsWith("developer"));
+
+//==========================
+//9️⃣ Nested Array Data Cleanup
+//==========================
+
+let data = [1,2,[3,4,[5,6]]];
+let flattened = data.flat(Infinity);
+console.log(flattened);
+
+//============================
+//🔟 Sports Data Slice
+//============================
+
+let sports = ["cricket","football","tennis","hockey","golf"]
+
+let sliceval=sports.slice(1,3);
+console.log(sliceval);
+
+let sliceval1=sports.slice(0,3);
+console.log(sliceval1);
+
+    </script>
+</body>
+</html>
