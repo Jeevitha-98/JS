@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yazhio</title>
+</head>
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="JSfinal.css">
+  <script src="./JSfinal.js"></script>
+</head>
+
+<body>
+
+<div class="header">
+
+  <h2 class="logo">
+    Yazhi<span class="smiley"></span>
+  </h2>
+
+  <input type="text" id="searchInput" class="search" placeholder="Search for products, brands & more">
+
+  <div class="right-section">
+
+    <div class="location-bar" onclick="setLocation()">
+      📍 <span id="locationText">Set your delivery location</span>
+    </div>
+
+    <div class="actions">
+
+      <div class="login-container">
+        <button onclick="toggleLogin()">Login</button>
+
+        <div id="loginBox" class="login-box">
+          <h3>Login</h3>
+         <input type="text" id="username" placeholder="Username">
+         <input type="password" id="password" placeholder="Password">
+          <button onclick="loginUser()">Login</button>
+        </div>
+      </div>
+
+     
+<div class="actions">
+  <button onclick="toggleWishlistPanel()">
+    ❤️ Wishlist <span id="wishCount">0</span>
+  </button>
+  <div id="wishlistPanel" class="panel"></div>
+</div>
+
+      <button onclick="toggleCartPanel()">🛒Cart <span id="cartCount">0</span></button>
+      <div id="cartPanel" class="panel"></div>
+    </div>
+
+  </div>
+
+</div>
+
+
+<div class="banner">
+
+  <img src="./Assests/black-friday-elements-assortment.jpg" class="banner-img">
+
+  <div class="banner-content">
+    <h1>Smart Shopping Starts Here</h1>
+    <p>Best Deals. Fast Delivery. Trusted Experience.</p>
+    <button class="shopnow" onclick="goToProducts()">Shop Now</button>
+  </div>
+
+ 
+  <div class="banner-center">
+    <h2>Up to 40% OFF</h2>
+    <p>on Your First Order</p>
+    <p>Only on App</p>
+
+    <img src="https://api.qrserver.com/v1/create-qr-code/?size=120x120&data=https://yourwebsite.com" class="scanner">
+
+    <p>Scan Now to Install</p>
+  </div>
+
+</div>
+
+
+<div class="feature-bar">
+  <div class="feature">📦 7 Days Easy Return</div>
+  <div class="divider"></div>
+  <div class="feature">💰 Cash on Delivery</div>
+  <div class="divider"></div>
+  <div class="feature">🏷️ Lowest Prices</div>
+</div>
+
+<div class="category-section">
+
+  <div class="cat-item" onclick="showAllProducts()">
+    <img src="./Assests/all products.png" alt="All Products">
+    <p>All Products</p>
+  </div>
+
+  <div class="cat-item" onclick="filterCategory('women\'s clothing')">
+    <img src="./Assests/Women.png">
+    <p>Womenswear</p>
+  </div>
+
+  <div class="cat-item" onclick="filterCategory('men\'s clothing')">
+    <img src="./Assests/isolated-image-positive-fashionable-young-man-with-stylish-hairdo-bristle-smiling-camera.jpg">
+    <p>Menswear</p>
+  </div>
+
+  <div class="cat-item" onclick="filterCategory('jewelery')">
+    <img src="./Assests/elegant-indian-bride-adorning-herself-with-jewelry.jpg">
+    <p>Accessories</p>
+  </div>
+
+  <div class="cat-item" onclick="filterCategory('electronics')">
+    <img src="./Assests/wireless-earbuds-with-neon-cyberpunk-style-lighting.jpg">
+    <p>Electronics</p>
+  </div>
+
+</div>
+  </div>
+
+
+
+  <div class="main-content">
+
+  
+  <div class="sidebar">
+  <h2>Products For You</h2>
+
+ 
+  <div class="filter-section">
+    <h4>Sort By</h4>
+    <select id="sortBy" onchange="sortProducts()">
+      <option value="default">Default</option>
+      <option value="priceLow">Price: Low to High</option>
+      <option value="priceHigh">Price: High to Low</option>
+    </select>
+  </div>
+
+
+  <div class="filter-section">
+    <h4>Gender</h4>
+    <select id="filterGender" onchange="filterByGender()">
+      <option value="all">All</option>
+      <option value="men's clothing">Men</option>
+      <option value="women's clothing">Women</option>
+    </select>
+  </div>
+
+
+  <div class="filter-section">
+    <h4>Price</h4>
+    <input type="range" id="filterPrice" min="0" max="1000" step="10" oninput="filterByPrice()">
+    <span id="priceValue">₹1000</span>
+  </div>
+
+ 
+  <div class="filter-section">
+    <h4>Size</h4>
+    <select id="filterSize" onchange="filterBySize()">
+      <option value="all">All</option>
+      <option value="S">S</option>
+      <option value="M">M</option>
+      <option value="L">L</option>
+      <option value="XL">XL</option>
+    </select>
+  </div>
+
+  
+  <div class="filter-section">
+    <h4>Color</h4>
+    <select id="filterColor" onchange="filterByColor()">
+      <option value="all">All</option>
+      <option value="red">Red</option>
+      <option value="blue">Blue</option>
+      <option value="green">Green</option>
+      <option value="black">Black</option>
+      <option value="white">White</option>
+    </select>
+  </div>
+
+  </div>
+
+<div style="flex:1;">
+
+   
+    <div id="loader" style="text-align:center; padding:20px; font-size:18px;">
+      ⏳ Loading products...
+    </div>
+
+    
+    <div id="errorMsg" style="text-align:center; color:red; display:none;">
+      ❌ Failed to load products. Please try again.
+    </div>
+
+   
+    <div id="products" class="products"></div>
+
+  </div>
+</div>
+
+<div id="couponBox" class="coupon-box">
+  🎉 Get 20% OFF! <br>
+  Use Code: <b>YAZHIO20</b>
+</div>
+
+
+<button id="couponBtn" class="coupon-btn" onclick="showCoupon()">
+  🎁
+</button>
+
+<footer class="footer">
+
+  <div class="footer-container">
+
+    
+    <div class="footer-section logo-section">
+      <h2>Yazhio🖤</h2>
+      <p>Your one-stop shop for fashion, electronics & more.</p>
+           <p>🌐 Instagram | Facebook | Twitter</p>
+     
+         
+    </div>
+
+    
+    <div class="footer-right">
+
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul>
+          <li onclick="showAllProducts()">Home</li>
+          <li onclick="filterCategory(`men's clothing`)">Menswear</li>
+          <li onclick="filterCategory(`women's clothing`)">Womenswear</li>
+          <li onclick="filterCategory('electronics')">Electronics</li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h3>Customer</h3>
+        <ul>
+          <li>My Account</li>
+          <li>Orders</li>
+          <li>Wishlist</li>
+          <li>Help</li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h3>Contact</h3>
+        <p>📍 Coimbatore, India</p>
+        <p>📞 +91 93455 01080</p>
+        <p>📧 support@yazhio.com</p>
+      </div>
+
+    </div>
+
+  </div>
+
+ 
+  <div class="footer-bottom">
+    © 2026 Yazhio. All Rights Reserved.
+  </div>
+
+</footer>
+</div>
+
+
+</body>
+</html>
